@@ -31,14 +31,14 @@ public class FileExplorerPart {
 		listViewer.setContentProvider(new FileContentProvider());
 		fileLabelProvider = new FileLabelProvider();
 		listViewer.setLabelProvider(fileLabelProvider);
-		listViewer.setInput(new File("C:\\"));
+//		listViewer.setInput(new File("C:\\"));
+		listViewer.setInput(new File("/"));
 		listViewer.addTreeListener(new ITreeViewerListener() {
 
 			@Override
 			public void treeExpanded(TreeExpansionEvent event) {
 				reviewImage(event.getSource());
 			}
-
 
 			@Override
 			public void treeCollapsed(TreeExpansionEvent event) {
@@ -54,22 +54,27 @@ public class FileExplorerPart {
 					return;
 
 				final Object sel = selection.getFirstElement();
-
 				final ITreeContentProvider provider = (ITreeContentProvider) listViewer.getContentProvider();
 
-				if (!provider.hasChildren(sel))
-					return;
-
-				if (listViewer.getExpandedState(sel)) {
-					listViewer.collapseToLevel(sel, AbstractTreeViewer.ALL_LEVELS);
-				} else {
-					listViewer.expandToLevel(sel, 1);
+				if (provider.hasChildren(sel)) {
+					if (listViewer.getExpandedState(sel)) {
+						listViewer.collapseToLevel(sel, AbstractTreeViewer.ALL_LEVELS);
+					} else {
+						listViewer.expandToLevel(sel, 1);
+					}
+					reviewImage(event.getSource());
 				}
-				reviewImage(event.getSource());
+				else{
+					File f = (File)sel; 
+					if(f.isFile() && f.getName().endsWith(".pdf")) {
+						System.out.println(f);
+					}
+				}
 			}
 		});
+
 	}
-	
+
 	private void reviewImage(Object source) {
 		System.out.println(source);
 	}

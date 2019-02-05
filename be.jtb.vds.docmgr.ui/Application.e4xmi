@@ -12,7 +12,7 @@
       </children>
       <children xsi:type="basic:PartSashContainer" xmi:id="_PPrqgCiBEemvGrU1aB1-ZA" elementId="be.jtb.vds.docmgr.ui.partsashcontainer.2" containerData="8000">
         <children xsi:type="basic:PartStack" xmi:id="_r8zdoCh-EemvGrU1aB1-ZA" elementId="be.jtb.vds.docmgr.ui.partstack.2" containerData="8000">
-          <children xsi:type="basic:Part" xmi:id="_sbQUMCh-EemvGrU1aB1-ZA" elementId="be.jtb.vds.docmgr.ui.part.viewer" contributionURI="bundleclass://be.jtb.vds.docmgr.ui/be.jtb.vds.docmgr.ui.parts.PdfViewerPart" label="Viewer"/>
+          <children xsi:type="basic:Part" xmi:id="_sbQUMCh-EemvGrU1aB1-ZA" elementId="be.jtb.vds.docmgr.ui.part.viewer" contributionURI="" label="Viewer"/>
         </children>
         <children xsi:type="basic:PartStack" xmi:id="_RBqlgCiBEemvGrU1aB1-ZA" elementId="be.jtb.vds.docmgr.ui.partstack.3" containerData="2000">
           <children xsi:type="basic:Part" xmi:id="_RWWcECiBEemvGrU1aB1-ZA" elementId="be.jtb.vds.docmgr.ui.part.controls" contributionURI="bundleclass://be.jtb.vds.docmgr.ui/be.jtb.vds.docmgr.ui.parts.ControlPart" label="Controls"/>
